@@ -8,5 +8,112 @@
 
 body{
     font-family: Inter;
+    color: white;
+    /*Background-image:
+    - Propriedade que define imagem de fundo
+    - Pode colocar imagens locais ou de websites com o url
+    - Como colocar imagens:
+    url("localdaimagem")
+
+    - Também aceita gradientes de fundo, com 
+    * linear-gradient(graus ou direcao, cor1, cor2...)
+    * radial-gradient
+    */
+    background-image: url("../IMG/bg-modificado.jpg");
+    /*Background-repeat
+    Especifica se vai manter a imagem se repetindo ou não
+    Valores: 
+    - repeat: em todas as direções;
+    - repeat-x: somente no eixo x;
+    - repeat-y: somente no eixo y;
+    - no-repeat: a imagem não se repete, pode ficar menor do que o tamanho do elemento
+    */
+    background-repeat: no-repeat;
+
+    /*Background-position:
+    - Especifica a posição onde a imagem estará localizada no elemento.
+    - Isso é mais perceptível quando o background-size é maior do que 100% ou se a imagem for muito grande
+    Valores:
+    - background-position: eixoX, eixoy;
+    - Medidas: left, top, center, right, bottom, porcentagem, px, rem, etc.
+    */
+    background-position:center 70%;
+
+    /*Background-size:
+    - Determina o tamanho da imagem em relação ao elemento que ocupa. Pode ter partes cortadas se a imagem for muito grande
+    - Medidas: cover(cobre todo o conteúdo), auto(mantém o tamanho original da imagem), % do elemento, px, rem, etc.
+    */
+    background-size: 120%;
+
+    /*Background-attachment
+    Define se a imagem vai acompanhar o scroll da página ou não
+    Valores: scroll (mantém onde estava), fixed (acompanha)
+    */
+    background-attachment: scroll;
 }
 
+.main-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+}
+
+
+.box-content{
+    background: #000000cc   ;
+    /* opacity: 10%; Opacity reduz a opacidade de todo o conteúdo*/
+    padding: 14px 1rem 1rem 1rem;
+    border-radius: 10px;
+}
+.box-content h1{
+    text-align: left;
+    margin-bottom: 14px;
+    border-bottom: 2px solid white;
+    padding-bottom: 7px;
+}
+
+.form-box{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.logo-box{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.actual-form{
+    width: 60%;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap:10px 0px;
+    padding: 10px;
+    border: none;
+}
+.form-row{
+    display: flex;
+    flex-direction: row;
+    gap: 0px 10px;
+}
+
+/* .form-row .form-element :first-child{
+    margin-right: 100px;
+} */
+
+.form-element{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.input{
+    border: none;
+    outline: none;
+    background-color: black;
+    box-shadow: 0px 0px 10px white;
+}
