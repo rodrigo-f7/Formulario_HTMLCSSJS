@@ -244,3 +244,18 @@ input[type = "submit"]:hover{
 input[type = "submit"]:active{
     transform: scale(105%);
 }
+
+footer{
+    background: #00000073;
+    margin-top: 10%;
+}
+.footer__title{
+    font-size: 1.5rem;
+}
+.footer__ul li{
+    margin-left: 2.5%;
+}
+
+.footer__row{
+    display: flex;
+}
