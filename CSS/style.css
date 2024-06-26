@@ -91,13 +91,14 @@ body{
 .form-group{
     display: flex;
     flex-direction: column;
-    gap:10px 0px;
+    gap: 1rem 0px;
     padding: 10px;
     border: none;
 }
 .form-row{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 0px 10px;
 }
 
@@ -106,14 +107,140 @@ body{
 } */
 
 .form-element{
-    width: 50%;
     display: flex;
     justify-content: space-between;
-    
+    align-items: center;
+    font-size: 1.2rem;
 }
+
+.form-element.form-two-elements{
+    width: 50%;
+}
+
+/*Pseudoclasses
+São classes internas de cada elemento que se relacionam com seus comportamentos, estados e relações entre seus elementos.
+
+Alguns exemplos de pseudoclasses são
+
+:active;
+:hover;
+:visited;
+e outras.
+*/
+/*Pseudoclasse :only-child
+Seletor de elementos que não possuem irmãos, isto é, que são únicos.
+*/
+.form-row .form-element:only-child{
+    width: 65%;
+    justify-content: space-between;
+}
+
+
+
+
+/*Pseudoclasse Funcional :has()
+Pseudoclasse que serve para selecionar os elementos pais que possuem uma outra classe. Sua sintaxe é esta:
+
+elemento_pai:has(.classe_dos_filhos)
+ .form-row:has(.form-one-element){
+    justify-content: center;
+} */
+
 .input{
     border: none;
     outline: none;
-    background-color: black;
-    box-shadow: 0px 0px 10px white;
+    background-color: #a1a1aac4;
+    border-radius: 1rem;
+    /* box-shadow: 0px 0px 10px white; */
+    color: #e5e7eb;
+    font-weight: 500;
+    text-shadow: 1px 1px 5px #0000009a;
+    padding: 8px;
+    width: 60%;
+    border: 2px solid #a1a1aac4;
+}
+
+.input:focus{
+    background-color: #7c7c83c4;
+    border: 2px solid rgba(230, 221, 255, 0.603);
+    transition: 300ms;
+}
+
+.radio-box{
+    width: 60%;
+}
+
+.form-element label{
+    color: #f9fafb;
+    width: 50%;
+}
+
+.form-row .form-element:only-child .input, .form-row .form-element:only-child textarea, .form-row .form-element:only-child .input-file-wrapper{
+    width: 100%;
+}
+
+.input-file-wrapper{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.input-file-box{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding: 5px;
+}
+
+.btn-input-file{
+    background-color: #06b6d4;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+.btn-input-file:hover{
+    background-color: #38bdf8;
+}
+
+.message-box{
+    resize: none;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-family: arial;
+    border-radius: 6px;
+    background-color: #f3f4f6;
+}
+
+.message-box:focus{
+    background-color: #d1d5db;
+}
+
+.btns-row{
+    display: flex;
+    justify-content: right;
+}
+
+/*Selecionando por atributo
+Selecionando o input que possui o tipo submit
+*/
+input[type = "submit"]{
+    background-color: #e11d48;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+input[type = "submit"]:hover{
+    background-color: #be123c;
+    transition: 300ms;
+
+}
+
+input[type = "submit"]:active{
+    transform: scale(105%);
 }

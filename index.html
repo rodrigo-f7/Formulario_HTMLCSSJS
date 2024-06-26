@@ -25,84 +25,99 @@
                         <!--Legend: Determina uma legenda para o fieldset-->
                         <!-- <legend>Dados Pessoais</legend> -->
                         <div class="form-row">
-                            <div class="form-element">
+                            <div class="form-element form-two-elements">
                                 <label for="first_name">Nome </label>
                                 <!--Input:
                                 Gera um controle para o usuário dar entrada em dados
                                 -->
-                                <input type="text" name="first_name" class="input">
+                                <input type="text" name="first_name" class="input" required>
                             </div>
             
-                            <div class="form-element">
+                            <div class="form-element form-two-elements">
                                 <label for="last_name">Sobrenome </label>
-                                <input type="text" name="last_name" class="input">
+                                <input type="text" name="last_name" class="input" required>
                             </div>
                         </div>
             
                         <div class="form-row">
-                            <div class="form-element">
+                            <div class="form-element form-two-elements">
                                 <label for="cpf">CPF</label>
-                                <input type="text" name="cpf" class="input">
+                                <input type="text" name="cpf" class="input" required>
                             </div>
             
-                            <div class="form-element">
+                            <div class="form-element form-two-elements">
                                 <!--Input email
                                 Dá entrada em emails no formulário
                                 -->
                                 <label for="email">Email </label>
-                                <input type="email" name="email" class="input">
+                                <input type="email" name="email" class="input" required>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-element">
+                            <div class="form-element form-two-elements">
                                 <!--Input tel
                                 Serve para dar entrada de números de telefones, é muito utilizado com o atributo maxlength, para determinar um limite para o telefone.
                                 -->
                                 <label for="tel">Telefone</label>
-                                <input type="tel" name="tel" class="input input-tel" maxlength="11">
+                                <input type="tel" name="tel" class="input input-tel" maxlength="11" required>
                             </div>
-                            <div class="form-element">
+                            <div class="form-element form-two-elements" >
                                 <label for="sexo">Sexo</label>
             
-                                <input type="radio" name="sexo" class="input-radio" value="m">
-                                <label for="sexo">M</label>
-                                <input type="radio" name="sexo" class="input-radio" value="f">
-                                <label for="sexo">F</label>
+                                <div class="radio-box">
+                                    <input type="radio" name="sexo" class="input-radio" value="m" required>
+                                    <label for="sexo">M</label>
+                                    <input type="radio" name="sexo" class="input-radio" value="f" required>
+                                    <label for="sexo" >F</label>
+                                </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-element">
+                            <div class="form-element form-one-element">
                                 <!-- Input Password
                                  Serve para dar entrada em senhas no formulário, fornece um botão de exibir ou ocultar senha por padrão
                                 -->
                                 <label for="password">Senha</label>
-                                <input type="password" name="password" class="input">
+                                <input type="password" name="password" class="input" required>
                             </div>
-                            <div class="form-element fill"></div>
+                            
                         </div>
                         <div class="form-row">
-                            <div class="form-element">
+                            <div class="form-element form-one-element">
                                 <!--Input-file
                                 Dá entrada em arquivos para o servidor receber
                                 -->
                                 <label for="photo-file">Foto 3x4: </label>
-                                <input type="file" name="photo-flle" " required>
+                                
+                                <div class="input-file-wrapper">
+                                    <div class="input-file-box">
+                                        <label for="photo-file" class="btn-input-file">Arquivo</label>
+                                        <input type="file"
+                                        name="photo-flle"
+                                        id = "photo-file"
+                                        class="input-file"
+                                        style = "display: none;position: absolute; z-index: -9999; opacity: 0 !important;"
+                                        required
+                                        >
+                                        <img src="" alt="" class="file-icon" style="display: none;">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-element">
+                            <div class="form-element form-one-element">
                                 <label for="message">Mensagem</label>
-                                <textarea name="message" id="" placeholder="Mensagem sobre a inscrição do torneio (opcional)"></textarea>
+                                <textarea name="message" id="message" placeholder="Mensagem sobre a inscrição do torneio (opcional)" class="message-box"></textarea>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="form-element">
-                                <!-- Output
+                        <!-- <div class="form-row">
+                            <div class="form-element form-one-element">
+                                Output
                                 É um espaço onde pode gerar o resultado do envio do formulário
-                                -->
+                                
                                 <output>Testando output</output>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="btns-row">
                             <!--Input reset
                             Gera um botão que reseta os valores do formulário para o padrão
@@ -111,9 +126,9 @@
                             <!-- Input Submit
                              Botão que envia os dados
                               -->
+                              <input type="submit" value="Enviar">
                         </div>
                     </fieldset>
-                    <input type="submit" value="Enviar">
                 </form>
             </div>
         </div>
@@ -123,6 +138,7 @@
         <p>Créditos do ícone videogame: <a href="https://www.flaticon.com/free-icons/video-game" title="video game icons">Video game icons created by Freepik - Flaticon</a></p>
         <p>Créditos do fundo: Foto de <a href="https://unsplash.com/pt-br/@carltraw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Carl Raw</a> na <a href="https://unsplash.com/pt-br/fotografias/sala-de-jogos-com-maquinas-de-fliperama-m3hn2Kn5Bns?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
         </p>
+        <p><a target="_blank" href="https://icons8.com/icon/334/jpg">JPG</a> ícone por <a target="_blank" href="https://icons8.com">Icons8</a></p>
     </footer>
 
 </body>
